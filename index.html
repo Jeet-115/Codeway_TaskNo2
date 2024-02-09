@@ -1,0 +1,144 @@
+<html>
+    <head>
+    </head>
+    <body bgcolor="powderblue">
+        <h1 style="color:blueviolet;font-size:200%;text-align:center;"> <u><b>CALCULATOR</b></u></h1>
+        <form>
+            <table border="3" bgcolor="blue" align="center">
+                <tr>
+                    <td colspan="3"><input type="text" id="txtno"></td>
+                </tr>
+                <tr>    
+                <td align="center"><input type="button" value="1️⃣" id="b1" onclick="n1()"></td>
+                <td align="center"><input type="button" value="2️⃣" id="b2" onclick="n2()"></td>
+                <td align="center"><input type="button" value="3️⃣" id="b3" onclick="n3()"></td>
+                </tr>
+                <tr>
+                <td align="center"><input type="button" value="4️⃣" id="b4" onclick="n4()"></td>
+                <td align="center"><input type="button" value="5️⃣" id="b5" onclick="n5()"></td>
+                <td align="center"><input type="button" value="6️⃣" id="b6" onclick="n6()"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" value="7️⃣" id="b7" onclick="n7()"></td>
+                    <td align="center"><input type="button" value="8️⃣" id="b8" onclick="n8()"></td>
+                    <td align="center"><input type="button" value="9️⃣" id="b9" onclick="n9()"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" value="➕/➖" id="bpm" onclick="npm()"></td>
+                    <td align="center"><input type="button" value="0️⃣" id="b0" onclick="n0()"></td>
+                    <td align="center"><input type="button" value="🟰" id="be" onclick="ans()"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" value="➕" onclick="add();"></td>
+                    <td align="center"><input type="button" value="➖" onclick="sub();"></td>
+                    <td align="center"><input type="button" value="✖️" onclick="mul();"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" value="➗" onclick="div();"></td>
+                    <td align="center"><input type="button" value="0️⃣0️⃣" id="b00" onclick="n00()"></td>
+                    <td align="center"><input type="button" value="©️" onclick="clr();"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            let no1=0,no2=0,op="";
+           function clr()
+           {
+            document.getElementById("txtno").value="";
+           }
+           function n1()
+           {
+            document.getElementById("txtno").value+="1";
+           }
+           function n2()
+           {
+            document.getElementById("txtno").value+="2";
+           }
+           function n3()
+           {
+            document.getElementById("txtno").value+="3";
+           }
+           function n4()
+           {
+            document.getElementById("txtno").value+="4";
+           }
+           function n5()
+           {
+            document.getElementById("txtno").value+="5";
+           }
+           function n6()
+           {
+            document.getElementById("txtno").value+="6";
+           }
+           function n7()
+           {
+            document.getElementById("txtno").value+="7";
+           }
+           function n8()
+           {
+            document.getElementById("txtno").value+="8";
+           }
+           function n9()
+           {
+            document.getElementById("txtno").value+="9";
+           }
+           function n0()
+           {
+            document.getElementById("txtno").value+="0";
+           }
+           function n00()
+           {
+            document.getElementById("txtno").value+="00";
+           }
+           function npm()
+           {
+            let rev=parseInt(document.getElementById("txtno").value);
+            document.getElementById("txtno").value=rev*-1;
+           }
+           function add()
+           {
+            no1=parseFloat(document.getElementById("txtno").value);
+            document.getElementById("txtno").value="";
+            op="+";
+           }
+           function sub()
+           {
+            no1=parseFloat(document.getElementById("txtno").value);
+            document.getElementById("txtno").value="";
+            op="-";
+           }
+           function mul()
+           {
+            no1=parseFloat(document.getElementById("txtno").value);
+            document.getElementById("txtno").value="";
+            op="*";
+           }
+           function div()
+           {
+            no1=parseFloat(document.getElementById("txtno").value);
+            document.getElementById("txtno").value="";
+            op="/";
+           }
+           function ans()
+           {
+            no2=parseFloat(document.getElementById("txtno").value);
+            if(op=="+")
+            {
+                document.getElementById("txtno").value=no1+no2;
+            }
+            else if(op=="-")
+            {
+                document.getElementById("txtno").value=no1-no2;
+            } 
+            else if(op=="*")
+            {
+                document.getElementById("txtno").value=no1*no2;
+            }
+            else if(op=="/")
+            {
+                document.getElementById("txtno").value=no1/no2;
+            } 
+           }
+        </script>
+    </body>
+</html>
